@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dodawanie">
+        <p>dodawanie</p>
+    <form>
+        <input type="number" id="a">
+        <input type="number" id="b">
+        <input type="number" id="c">
+        <input type="button" value="Dodaj" onclick="dodaj()">
+    </form>
+    </div>
+    <div class="sredniowanie">
+        <p>srednia</p>
+        <form>
+            <input type="number" id="x">
+            <input type="number" id="y">
+            <input type="number" id="z">
+            <input type="button" value="sredniuj" onclick="sredniuj()">
+        </form>
+    </div>
+    <div class="eloelo">
+        <p>eloelo</p>
+        <form>
+            <input type="number" id="d">
+            <input type="number" id="e">
+            <input type="button" value="eloelo" onclick="eloelo()">
+        </form>
+        <div id="pierwsze"></div>
+                <div id="drugie"></div>
+                <div id="trzecie"></div>
+    </div>
+    <div class="pierwiastek">
+        <p>pierwsiastekj</p>
+        <form>
+            <input type="number" id="f">
+            <input type="button" value="pierwiastek" onclick="pierwiastek()">
+        </form>
+    </div>
+    <div id="pierwiastek"></div>
+
+    <div class="pole">
+        <p>pole</p>
+        <form>
+            <input type="number" id="g">
+            <input type="button" value="pole" onclick="pole()">
+        </form>
+    </div>
+    <div id="pole"></div>
+
+    <div class="kolo">
+        <p>kolo</p>
+        <form>
+            <input type="number" id="h">
+            <input type="button" value="kolo" onclick="kolo()">
+        </form>
+    </div>
+    <div id="kolo"></div>
+
+    <div class="benzinen">
+        <p>benzynowanie</p>
+        <form>
+            <input type="number" id="BENZYNA">
+            <input type="button" value="BENZYNA" onclick="BENZYNA()">
+        </form>
+    </div>
+    <div id="bezninen"></div>
+
+
+
+    <script>
+        function dodaj()
+ {
+   var a = Number(document.getElementById("a").value);
+   var b = Number(document.getElementById("b").value);
+   var c = Number(document.getElementById("c").value);
+
+   alert(a + b + c);
+ } 
+ 
+ function sredniuj()
+ {
+   var x = Number(document.getElementById("x").value);
+   var y = Number(document.getElementById("y").value);
+   var z = Number(document.getElementById("z").value);
+
+   alert ((x + y + z)/3);
+ }
+ function eloelo(){
+        var d = Number(document.getElementById("d").value);
+        var e = Number(document.getElementById("e").value);
+        document.getElementById("pierwsze").innerHTML = "dodwanie:" +(d+e);
+        document.getElementById("drugie").innerHTML = "odejmowanie:" +(d-e);
+        document.getElementById("trzecie").innerHTML = "mnozenie:" +(d*e);
+    }
+    function pierwiastek(){
+        var f = Number(document.getElementById("f").value);
+        var wynik = Math.sqrt(f);
+        document.getElementById("pierwiastek").innerHTML = "pierwsiatek:" + wynik;
+    }
+    function pole(){
+        var g = Number(document.getElementById("g").value);
+        var wynik2 = g * g;
+        document.getElementById("pole").innerHTML = "pole:" + wynik2;
+    }
+    function kolo(){
+        var h = Number(document.getElementById("h").value);
+        var wynik = h * h * Math.PI;
+        var wynik2 = h * 2 * Math.PI;
+        document.getElementById("kolo").innerHTML = "pole:" + wynik + "obwod:" + wynik2;
+    }
+    function bezninen(){
+        var i = Number(document.getElementById("i").value);
+        var wynik = 360/(100/8) * i;
+        document.getElementById("BEZYNNA").innerHTML = "benzyna:" + wynik;
+    }
+    </script>
+</body>
+</html>
